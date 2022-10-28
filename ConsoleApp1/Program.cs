@@ -5,8 +5,6 @@ using ConsoleApp1;
 
 
 Player player = Player.GetInstance();
-
-
 string menuStr = "You can : "+Environment.NewLine ;
 List<string> choiceMenu = new List<string>() {"work","upgrade","money"};
 

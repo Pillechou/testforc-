@@ -2,11 +2,13 @@
 
 public class Player
 {
-    private Player(){}
+    
     private static Player _instance;
     private double money = 10.0;
     private string name = Environment.UserName;
-    Settings _settings = Settings.GetInstance();
+    private Settings _settings = Settings.GetInstance();
+
+   
 
 
     public static Player GetInstance()
@@ -34,7 +36,7 @@ public class Player
             money -= _settings.GetupgradeCost();
             Console.WriteLine(_settings.GetmoneyMultiplier()+Environment.NewLine+_settings.GetmoneyMultiplierMultiplier());
             _settings.SetmoneyMultiplier(_settings.GetmoneyMultiplier()+_settings.GetmoneyMultiplierMultiplier());
-            _settings.SetmoneyMultiplierMultiplier(_settings.GetmoneyMultiplierMultiplier() *1.3);
+            _settings.SetmoneyMultiplierMultiplier(_settings.GetmoneyMultiplier() *1.3);
             _settings.SetupgradeCost(_settings.GetupgradeCost() * 1.6);
 
         }
